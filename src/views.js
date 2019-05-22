@@ -38,7 +38,7 @@ const generateNoteDOM = (note) => {
 const renderNotes = () => {
     const filters = getFilters()
     const notes = sortNotes(filters.sortBy)
-    const notesEl = document.querySelector('#notes')
+    const notesEl = document.getElementById('notes')
     const filteredNotes = notes.filter((note) => note.title.toLowerCase().includes(filters.searchText.toLowerCase()))
 
     notesEl.innerHTML = ''
@@ -57,9 +57,9 @@ const renderNotes = () => {
 }
 
 const initializeEditPage = (noteId) => {
-    const titleElement = document.querySelector('#note-title')
-    const bodyElement = document.querySelector('#note-body')
-    const dateElement = document.querySelector('#last-edited')
+    const titleElement = document.getElementById('note-title')
+    const bodyElement = document.getElementById('note-body')
+    const dateElement = document.getElementById('last-edited')
     const notes = getNotes()
     const note = notes.find((note) => note.id === noteId)
 

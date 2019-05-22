@@ -7,10 +7,10 @@ import {
     removeNote
 } from './notes'
 
-const titleElement = document.querySelector('#note-title')
-const bodyElement = document.querySelector('#note-body')
-const removeElement = document.querySelector('#remove-note')
-const dateElement = document.querySelector('#last-edited')
+const titleElement = document.getElementById('note-title')
+const bodyElement = document.getElementById('note-body')
+const removeElement = document.getElementById('remove-note')
+const dateElement = document.getElementById('last-edited')
 const noteId = location.hash.substring(1)
 
 initializeEditPage(noteId)
